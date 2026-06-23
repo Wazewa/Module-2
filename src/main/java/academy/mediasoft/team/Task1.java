@@ -39,7 +39,7 @@ public class Task1 {
         System.out.println("Средний возраст равен: " + averageAge);
     }
 
-    public static void main(String[] args) {
+    static void main() {
         int count = 50;
 
         int[] arr = createdArrayOfProductionYear(count);

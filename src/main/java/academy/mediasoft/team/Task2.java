@@ -57,8 +57,7 @@ public class Task2 {
         }
 
     }
-
-    public static void main(String[] args) {
+    static void main() {
         List<String> nameModel = createListModel();
 
         nameModel = removingDuplicates(nameModel);
