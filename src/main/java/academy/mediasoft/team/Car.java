@@ -10,6 +10,7 @@ public class Car implements Comparable<Car> {
     private int yearProduction;
     private double mileage;
     private BigDecimal price;
+    private Type type;
 
     public Car() {}
 
@@ -20,6 +21,15 @@ public class Car implements Comparable<Car> {
         this.yearProduction = yearProduction;
         this.mileage = mileage;
         this.price = price;
+    }
+    public Car(String VIN, String model, String producer, int yearProduction, double mileage, BigDecimal price, Type type) {
+        this.VIN = VIN;
+        this.model = model;
+        this.producer = producer;
+        this.yearProduction = yearProduction;
+        this.mileage = mileage;
+        this.price = price;
+        this.type = type;
     }
 
     public String getVIN() {
@@ -34,9 +44,7 @@ public class Car implements Comparable<Car> {
         return producer;
     }
 
-    public int getYearProduction() {
-        return yearProduction;
-    }
+    public int getYearProduction() { return yearProduction; }
 
     public double getMileage() {
         return mileage;
@@ -44,6 +52,10 @@ public class Car implements Comparable<Car> {
 
     public BigDecimal getPrice() {
         return price;
+    }
+
+    public Type getType() {
+        return type;
     }
 
     @Override
@@ -63,11 +75,12 @@ public class Car implements Comparable<Car> {
     @Override
     public String toString() {
         return "VIN-номер: " + VIN
-                + "\n Марка: " + producer
+                + "\n Производитель: " + producer
                 + "\n Модель: " + model
                 + "\n Год выпуска: " + yearProduction
                 + "\n Пробег: " + mileage
-                + "\n Цена: " + price;
+                + "\n Цена: " + price
+                + "\n Тип: " + type;
     }
 
     @Override
